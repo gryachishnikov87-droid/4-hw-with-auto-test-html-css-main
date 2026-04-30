@@ -8,14 +8,14 @@
     width: 100%;
     margin: 0px auto;
     max-width: 1180px; /* ⚠️ ОБРАТИ ВНИМАНИЕ - максимальная ширина увеличилась на размер отступов, чтобы ширина контента оставалась корректной */
-    padding: 150px; 
+    padding: 0px 20px; 
     /* 📍 Свойство для внутрених отступов */
 }
 
 body {
     font-family: "Inter", sans-serif; 
     color: #303030;
-    max-width: 1100px;
+    min-width: 375px;
     /* 📍 Минимальная ширина */ 
 }
 
@@ -146,7 +146,7 @@ form {
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     /* 📍 Свойства для расположения элементов (инпута и кнопки) и отступа между ними */
 }
 
@@ -226,7 +226,7 @@ footer {
     }
 
     .main-image {
-        max-width: auto;
+        max-width: 100%;
         /* 📍 Максимальная ширина для главного изображения в % */
     }
 
@@ -244,7 +244,7 @@ footer {
 @media screen and (max-width: 768px) {
     .info-wrapper {
         flex-direction: column;
-        gap: 30px;
+        gap: 60px;
         /* 📍 Свойства для расположения 2-x списков и отступа между ними */
     }
 }
@@ -252,24 +252,26 @@ footer {
 /* Стили для адаптива под мобильные устройства */
 @media screen and (max-width: 576px) {
     .main-section {
-        margin: 60px 0; 
+        margin: 30px 0 60px; 
+
         /* 📍 Внутренние отступы сверху и снизу */
     }
 
     .main-section .wrapper {
-        flex-wrap: wrap;
-        row-gap: 20px;
+        display: flex; 
+        gap: 50px
         /* 📍 Отступ между изображением и блоком с текстом */
     }
 
     .main-title {
-        font-size: 18px;
+        font-size: 36px;
         /* 📍 Размер шрифта */
     }
 
     .about-section .wrapper,
     .info-wrapper {
-        margin: 20px;
+        margin: 40px;
+        gap: 50px;
         /* 📍 Отступ между изображением и блоком с текстом */
     }
 }
